@@ -1,5 +1,4 @@
-// Setup Event Listener for Page Load
-document.addEventListener('DOMContentLoaded', function(){
+
     // Select DOM Elements
     const addButton = document.getElementById('add-task-btn');
     const taskInput = document.getElementById('task-input');
@@ -33,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function(){
         
     }
 
-    addButton.addEventListener('click', addTask);
+    document.addEventListener('DOMContentLoaded', function(){
+        addButton.addEventListener('click', addTask);
 
     taskInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter'){
